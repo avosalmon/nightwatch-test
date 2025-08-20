@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
+use Illuminate\Support\Facades\Log;
 
 class ProcessRefund implements ShouldQueue
 {
@@ -22,6 +23,6 @@ class ProcessRefund implements ShouldQueue
      */
     public function handle(): void
     {
-        //
+        Log::info('Processing refund');
     }
 }
